@@ -4,6 +4,7 @@ from pydantic import BaseModel, Field
 # Product data model
 class Product(BaseModel):
     id: str
+    category_id: str #new changes added
     name: str = Field(..., min_length=1)
     description: Optional[str] = None
     category: str
